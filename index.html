@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Character and Word Count</title>	
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+	<center>
+		<h1>Character and word count</h1>
+		<form>
+			<textarea placeholder="Enter text here" rows=5 cols=30 id="txt"></textarea>
+		</form>
+		<h1 id="msg"></h1>
+	
+		<script>
+			let txt = document.getElementById("txt");
+			let msg = document.getElementById("msg") ;
+			txt.addEventListener("input", function(){
+				let t = txt.value.trim();
+				let cc = t.split(" ").join("").length;
+				let wc = 0;
+				if (cc == 0)
+					wc = 0;
+				else
+					wc = t.split(" ").length;
+				let ans = "cc = "+ cc + " wc = "+wc;
+				msg.innerHTML = ans;
+			});
+		</script>
+	</center>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
